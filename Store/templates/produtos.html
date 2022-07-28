@@ -1,0 +1,47 @@
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+</head>
+<body>
+    <h1>Produtos</h1>
+    <table border='1'>
+        <tr>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Preco</th>
+            <th>Estoque</th>
+        <tr> 
+         {% for Produto in produtos %}   
+        <tr>
+            <tr>{{ produto.nome}}</td>
+            <tr>{{ produto.categoria }}</td>
+            <tr>R$ {{ produto.preco}}</td> 
+            <tr>{{ produto.estoque}}</td>  
+        <tr>  
+        {%endfor%}                  
+            <td>Produto A</td>
+            <td>Categoria 1</td>
+            <td>R$ 10,00</td>
+            <td>50</td>
+        <tr>
+        <tr>
+            <td>Produto B</td>
+            <td>Categoria 2</td>
+            <td>R$ 28,50</td>
+            <td>8</td>
+        <tr>
+        <tr>
+            <td>Produto C</td>
+            <td>Categoria 2</td>
+            <td>R$ 105,90</td>
+            <td>37</td>
+            <tr>
+            <tr>
+
+         
+
+   
