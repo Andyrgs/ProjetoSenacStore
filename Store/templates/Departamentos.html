@@ -10,8 +10,8 @@
    <h1>Senac Store</h1>
    <ul>
     {% for depto in departamentos %}
-   <li> {{ depto.nome}}</li>
-    {%endfor%}
+   <li><a href="/categorias/{{ depto.id }}">{{ depto.nome}}</a></li>
+    {% endfor %} 
    </ul>
 
 </body>

@@ -6,6 +6,6 @@ from Store import views
 urlpatterns = [
     path('', views.index, name='index'), 
     path('departamentos/', views.departamentos, name='departamentos'),
-    path('categorias/', views.categorias, name='categorias'),
-    path('produtos/', views.produtos, name='produtos')
+    path('categorias/<int:id>', views.categorias, name='categorias'),
+    path('produtos/<int:id>', views.produtos, name='produtos')
 ]
