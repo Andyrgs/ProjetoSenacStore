@@ -7,14 +7,15 @@
     <title>Categoria</title>
 </head>
 <body>
-    <h1>Categoria</h1>
+    <h1>Categorias do Departamento{{departamento.nome}}</h1>
     <ul> 
-        {% for categoria in categorias %}
-        <li><a href="/produtos/{{categ.id}}">[{{ categ.departemnto}}]{{ categ.nome }}</a></li>
+        {% for categ in categorias %}
+        <li><a href="/produtos/{{categ.id}}">[{{ categ.departamento}}]{{ categ.nome }}</a></li>
         {% empty %}
         Produtos para escola
         {% endfor %}
     </ul>   
+    </html>
 </body>
 </html>
 
