@@ -1,3 +1,4 @@
+from multiprocessing import context
 from unicodedata import category
 from django.shortcuts import render
 from django.http import HttpResponse
@@ -31,3 +32,10 @@ def produtos(request, id):
      listas_produtos = Produto.objects.filter(categoria_id = id)
      context = {'produtos': listas_produtos}
      return render(request,'produtos.html', context)
+
+def produto_detalhe(request, id):
+    produto = produtos.objects.get(id = id)
+    context = {
+                'produto': produto
+    }
+    return render(request,'produto_detalhe.html',context)

@@ -1,13 +1,16 @@
-<!DOCTYPE html>
+{%load static%}
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Departamentos</title>
+    <link rel='stylesheet' type='text/css'href="{% static'css/estilos.css'%}">
 </head>
 <body>
+    <div id='topo'
    <h1>Senac Store</h1>
+   <img src='{% static '/ima/logo_senac.jpg'%}' widht '150'>
    <ul>
     {% for depto in departamentos %}
    <li><a href="/categorias/{{ depto.id }}">{{ depto.nome}}</a></li>

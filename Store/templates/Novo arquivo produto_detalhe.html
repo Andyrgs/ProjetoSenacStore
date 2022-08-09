@@ -1,0 +1,21 @@
+{%load static%}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{produto.nome}}</title>
+    <link rel='stylesheet' type='text/css'href="{% static'css/estilos.css'%}">
+</head>
+<body>
+    <h1>{{produto.nome}}</h1>
+    <h5>{{produto.categoria.departamento.nome}} >> {{produto.categoria.nome}}</h5>
+    <img src='{{prdoduto.imagem.url}}' width="200">
+    {% if produto.lancamento == True%}
+    <h2>LANÇAMENTO!!!!!</h2>
+    {%endif%}
+    <p>{{produto.descricao|linebreaks}}<p>
+    <h3>Preço: R$ {{produto.preco}}</h3>
+    <h3>Estoque: {{produto.estoque}}</h3> 
+</body>
+</html>

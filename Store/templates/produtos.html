@@ -1,9 +1,10 @@
-<html lang="pt-br">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
+    <title>{{prdoduto.nome}}</title>
+    <link rel='stylesheet' type='text/css'href="{% static'css/estilos.css'%}">
 </head>
 <body>
     <h1> Produtos </h1>
@@ -16,20 +17,21 @@
         <td>Imagem</td>
     </tr>   
         {%for prod in produtos%} 
-        
     <tr>
-        <td> {{ prod.nome }}</td>
-        <td> {{ prod.categoria }}</td>
-        <td> {{ prod.preco }}</td> 
-        <td> {{ prod.estoque }}</td>  
-        <td> <img src='{{ prod.imagem.url}}' width="80"> </td>
+        <td><a href="/produto_detalhe/{{prod.id}}">
+            {{prod.nome}}   
+        </a></td>
+        <td>{{ prod.categoria }}</td>
+        <td>R$ {{ prod.preco }}</td> 
+        <td>{{ prod.estoque }}</td>  
+        <td><img src="{{prod.imagem.url}}" width="80"> </td>
         <td>{% if prod.lancamento == True %}
                        Lancamento!!!
             {% endif %}
             
         </td>   
     <tr>  
-        {% endfor %} 
+        {%endfor%} 
 </table>
 
 <body>
