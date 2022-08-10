@@ -39,3 +39,9 @@ def produto_detalhe(request, id):
                 'produto': produto
     }
     return render(request,'produto_detalhe.html',context)
+
+def institucional (request):
+    return render(request, 'institucional.html')    
+
+def contato(resquest):
+  return render(request, 'contato.html')   

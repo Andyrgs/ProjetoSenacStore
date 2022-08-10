@@ -1,0 +1,53 @@
+{% load static %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
+    <title>Produtos</title>
+    <link rel='stylesheet' type='text/css'href="{% static'css/estilos.css'%}">
+</head>
+<body>
+    {% include 'includes/topo.html' %}
+    <h1> Produtos </h1>
+    <table borde ='1'>
+        <tr>
+            <td>Nome</td>
+            <td>Categoria</td>
+            <td>Preco</td>
+            <td>Estoque</td>
+            <td>Imagem</td>
+            {%for prod in produtos%} 
+        <tr> 
+        <tr>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.categoria }}</td>
+            <td>R${{ produto.preco }}</td> 
+            <td>{{ produto.estoque }}</td>  
+            <td>{{ produto.imagem }}</td>
+            <td><img src='{{ prod.imagem.url}}' width="80"> </td>
+            <td>{% if prod.lancamento == True %}
+                    Lancamento!!!
+                {% endif %}
+            </td>   
+        <tr>  
+        {% endfor %} 
+
+            <td>Produto A</td>
+            <td>Categoria 1</td>
+            <td>R$10,00</td>
+            <td>50</td>
+        <tr>
+        <tr>
+            <td>Produto B</td>
+            <td>Categoria 2</td>
+            <td>R$28,50</td>
+            <td>8</td>
+        <tr>
+        <tr>
+            <td>Produto C</td>
+            <td>Categoria 2</td>
+            <td>R$105,90</td>
+            <td>37</td>
+            <tr>
+            <tr>
