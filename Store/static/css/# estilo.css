@@ -1,24 +1,40 @@
-/* seletro por id */
-#topo {
-    border-bottom: 2px solid #034e9d  ;
-}
-
-#topo ul {
-    display: block;
-    float: right;
-}
-
-#topo ul li {
-    display: block;
-    float: left;
-    padding: 5px 20px;
-    border: 1px solid white;
-    background-color: #034e9d;
-    color: #f7941e;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
-}
-#topo a{}
-#topo ul li:hover {
-    color: white;
-}
+/* seletor universal */
+* {
+    color:crimson; 
+ }
+ 
+ /* seletor por elemento (tag) */
+ h1 {
+     color: blueviolet;
+ }
+ 
+ /* seletro por id */
+ #topo {
+     border-bottom: 2px solid #034e9d  ;
+ }
+ 
+ #topo ul {
+     display: block;
+     float: right;
+ }
+ 
+ #topo ul li {
+     display: block;
+     float: left;
+     padding: 5px 20px;
+     border: 1px solid white;
+     background-color: #034e9d;
+     color: #f7941e;
+     font-family: Arial, Helvetica, sans-serif;
+     font-size: large;
+ }
+ 
+ #topo a{
+     text-decoration: none;
+     color:#f7941e
+ }
+ 
+ #topo a:hover {
+     color: white;
+ }
+ 

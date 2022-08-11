@@ -1,11 +1,14 @@
 {% load static %}
 <div id="topo">
-    <a> href="{% ul 'index' %}">
-    <img src="{% static '/img/logo_senac.jpg' %}" widht="150"> 
+    <a href="{% url 'index' %}">
+        <img src="{% static '/img/logo_senac.jpg' %}" width="150">
     </a>
-    </ul>
-        <li> <a href="{% ul' departementos'> Departamentos' %}</a></li>
-        <li>Contato</li>
-        <li><a href="{% ul'institucional' %}">Sobre a Empresa<a></li>       
     <ul>
+        <li><a href="{% url 'departamentos' %}">
+            Departamentos</a></li>
+        <li><a href="{% url 'contato' %}">
+            Contato</a></li>
+        <li><a href="{% url 'institucional'%}">
+            Sobre a Empresa</a></li>
+    </ul>
 </div>
